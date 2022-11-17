@@ -12,8 +12,7 @@ RUN apt-get update \
 
 ENV PATH=$PATH:/opt/mssql-tools/bin
 
-RUN  apt-get install -y unixodbc-dev \ 
-    && pip install -r requirements.txt
+RUN  apt-get install -y unixodbc-dev
 
 # Setup locale, Oracle instant client and Python
 RUN apt-get update \
