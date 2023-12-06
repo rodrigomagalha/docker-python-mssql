@@ -1,4 +1,4 @@
-FROM python:3.11.7
+FROM python:3.10
 
 ENV PYTHONHONUNBUFFERED 1
 
@@ -14,7 +14,6 @@ ENV PATH=$PATH:/opt/mssql-tools/bin
 
 RUN  apt-get install -y unixodbc-dev
 
-# Setup locale, Oracle instant client and Python
 RUN apt-get update \
     && apt-get install -y locales \
     && sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen \
